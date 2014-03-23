@@ -8,8 +8,8 @@ def complement(pixels, size):
     width, height = size
     my_pixels = []
 
-    for j in range(width):
-        for i in range(height):
+    for j in range(height):
+        for i in range(width):
             current_pixel = 255 - pixels[i, j]
             my_pixels.append(current_pixel)
 
@@ -20,8 +20,8 @@ def black_white(pixels, size):
     width, height = size
     my_pixels = []
 
-    for j in range(width):
-        for i in range(height):
+    for j in range(height):
+        for i in range(width):
             current_pixel = 0 if pixels[i, j] < 128 else 255
             my_pixels.append(current_pixel)
 
@@ -34,8 +34,8 @@ def mean_filter(pixels, size):
     width, height = size
     my_pixels = []
 
-    for j in range(width):
-        for i in range(height):
+    for j in range(height):
+        for i in range(width):
             neighboors = []
 
             # right neighboor
@@ -96,8 +96,8 @@ def sharpening(pixels, size):
     width, height = size
     my_pixels = []
 
-    for j in range(width):
-        for i in range(height):
+    for j in range(height):
+        for i in range(width):
 
             try:
                 dx = pixels[i+1, j] - pixels[i, j]
