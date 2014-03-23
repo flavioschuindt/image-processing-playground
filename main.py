@@ -135,6 +135,7 @@ if __name__ == "__main__":
 
         new_pixels = op(pixels, gray_size)
         result = create_image_from_pixels(new_pixels, 'L', gray_size)
+        result.save(operation+".png", "png")
         result.show()
 
 
